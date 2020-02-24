@@ -8,17 +8,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
 import { ToolbarUserComponent } from './toolbar-user/toolbar-user.component';
+import { TodomvcComponent } from './todomvc/todomvc.component';
+
+//引入双向绑定 ngModle
+import {FormsModule} from '@Angular/forms';
+
 
 @NgModule({
   //组件模块资源：组件/指令/服务
   declarations: [
     AppComponent,
     HeadComponent,
-    ToolbarUserComponent
+    ToolbarUserComponent,
+    TodomvcComponent
   ],
   imports: [//依赖模块
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,//引入双向绑定 ngModle
   ],
   providers: [],
   bootstrap: [AppComponent]//指定启动模块
